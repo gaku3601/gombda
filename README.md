@@ -5,14 +5,14 @@ This Library is  thin rapper for Easier to use api gateway and lambda.
 ## example
 
     func (h handler) Router(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	g := gombda.New(request)
-	g.POST("/", h.Create)
-	g.GET("/{id}", h.Show)
-	g.DELETE("/{id}", h.Destroy)
-	g.PATCH("/{id}", h.Update)
-	g.GET("/", h.Index)
-
-	return g.Start()
+        g := gombda.New(request)
+        g.POST("/", h.Create)
+        g.GET("/{id}", h.Show)
+        g.DELETE("/{id}", h.Destroy)
+        g.PATCH("/{id}", h.Update)
+        g.GET("/", h.Index)
+        
+        return g.Start()
     }
     
     func (h handler) Create(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
